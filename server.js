@@ -11,7 +11,7 @@ app.use(express.json());
 
 app.get('/api/users', async (req, res) => {
   try {
-    const result = await pool.query('SELECT * FROM NodeTest');
+    const result = await pool.query('SELECT * FROM nodetest');
     res.json(result.rows);
   } catch (err) {
     console.error('DB Error:', err);
